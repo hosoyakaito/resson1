@@ -33,7 +33,7 @@
     
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xffffff);
-    directionalLight.position.set(1, 1, 1);   //位置を指定
+    directionalLight.position.set(10, 10, 10);   //位置を指定
     scene.add(directionalLight);     // シーンに追加
       
     // helper
@@ -54,7 +54,7 @@
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      box.rotation.x += 0.20;
+      box.rotation.x += 0.01;
       box.rotation.y += 0.01;
   
       renderer.render(scene, camera);
