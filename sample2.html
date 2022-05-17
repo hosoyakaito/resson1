@@ -43,29 +43,29 @@
     //scene.add(axisHelper);
 
     // 箱を作成
-    //var geometry = new THREE.BoxGeometry(2, 1, 2);
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    //var box = new THREE.Mesh(geometry, material);
-    //box.position.set(0,0,0); //位置を指定
-    //scene.add(box);   // シーンに追加
+    var geometry = new THREE.BoxGeometry(2, 1, 2);
+    var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+    var box = new THREE.Mesh(geometry, material);
+    box.position.set(0,0,0); //位置を指定
+    scene.add(box);   // シーンに追加
     
-    ver geometry = new THREE.TorusGeometry(3, 1, 2, 1);
-    ver material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    ver Torus = new THREE.Mesh(geometry, material);
-    Torus.position.set(3,3,3);
-    scene.add(Torus);
+    //ver geometry = new THREE.TorusGeometry(3, 1, 2, 1);
+    //ver material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+    //ver Torus = new THREE.Mesh(geometry, material);
+    //Torus.position.set(3,3,3);
+    //scene.add(Torus);
     
     // 初回実行
     var update = function() {
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      //box.rotation.x += 0.01;
-      //box.rotation.y += 0.01;
+      box.rotation.x += 0.01;
+      box.rotation.y += 0.01;
       
       
-      Torus.rotation.x += 0.01;
-      Torus.rotation.y += 0.01;
+      //Torus.rotation.x += 0.01;
+      //Torus.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
