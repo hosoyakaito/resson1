@@ -19,11 +19,13 @@
   
     // レンダラーを作成
     var renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
   
     // シーンを作成
     var scene = new THREE.Scene();
+    const scene = new THREE.Scene();
 
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
@@ -60,11 +62,8 @@
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      //box.rotation.x += 0.01;
-      //box.rotation.y += 0.01;
-      
-      mesh.rotation.x += 0.01;
-      mesh.rotation.y += 0.01;
+      box.rotation.x += 0.01;
+      box.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
