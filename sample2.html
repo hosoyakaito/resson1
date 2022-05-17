@@ -34,6 +34,7 @@
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 1, 1);   //位置を指定
+    directionalLight.position.set(3, 3, 3);
     scene.add(directionalLight);     // シーンに追加
       
     // helper
@@ -43,7 +44,7 @@
     //scene.add(axisHelper);
 
     // 箱を作成
-    var geometry = new THREE.TorusGeometry(2, 1, 2,3);
+    var geometry = new THREE.TorusGeometry(2, 1, 2, 3);
     var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0,0,0); //位置を指定
