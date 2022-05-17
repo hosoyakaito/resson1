@@ -45,17 +45,17 @@
     // 箱を作成
     var geometry = new THREE.TorusGeometry(2, 1, 2,3);
     var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    var Torus = new THREE.Mesh(geometry, material);
-    Torus.position.set(0,0,0); //位置を指定
-    scene.add(Torus);   // シーンに追加
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0,0,0); //位置を指定
+    scene.add(mesh);   // シーンに追加
     
     // 初回実行
     var update = function() {
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      Torus.rotation.x += 0.01;
-      Torus.rotation.y += 0.01;
+      mesh.rotation.x += 0.01;
+      mesh.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
