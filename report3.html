@@ -89,7 +89,7 @@
         //scene.add(cone);
 
         var sphereGeometry = new THREE.SphereGeometry( 1, 32, 32 );
-        var sphereMaterial = new THREE.MeshPhongMaterial( {color: 0xff7f50,wireframe: true });
+        var sphereMaterial = new THREE.MeshPhongMaterial( {color: 0xff7f50});
         var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
         sphere.castShadow = true;
         sphere.position.set( 0.1, 0, 0 );
