@@ -39,17 +39,6 @@
       //シーンに追加
       scene.add(directionalLightM);
 
-      ///var pointLight = new THREE.PointLight(0xffffff,0.5);
-      ///pointLight.position.set(0, 0, 0);
-      ///pointLight.castShadow = true; 
-      ///scene.add(pointLight);
-
-      //var directionalLightM2 = new THREE.DirectionalLight(0xffffff,0.5);
-      //directionalLightM2.position.set(0, -1, 5);
-      //directionalLightM2.castShadow = true; 
-      //シーンに追加
-      //scene.add(directionalLightM2);
-
       // 照明を作成SpotLight(色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
       var light = new THREE.SpotLight(0xffffff, 1, 100, Math.PI / 20, 0.05);
       light.position.set(0,10, -15);
@@ -127,7 +116,7 @@
         var sphere4 = new THREE.Mesh( sphereGeometry4, sphereMaterial4 );
         sphere4.castShadow = true;
         sphere4.position.set( 3, 0, 0 );
-        scene.add( sphere4 );
+        //scene.add( sphere4 );
 
 
         const group = new THREE.Group()
