@@ -68,13 +68,13 @@
         
         var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
         var Sphere = new THREE.Mesh(geometry2, mat);
-        Sphere.position.set(0,0,0);
+        Sphere.position.set(-2,0,0);
         scene.add(Sphere);
 
         
         var geometry3 = new THREE.CylinderGeometry( 0.2, 0.5, 0.5, 20, 4 );
         var Cylinder = new THREE.Mesh(geometry3, mat);
-        Cylinder.position.set(1.5,0,0);
+        Cylinder.position.set(2,0,0);
         scene.add(Cylinder);
 
         update();
