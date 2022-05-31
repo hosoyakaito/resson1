@@ -136,6 +136,8 @@
         group3.add(sphere4);  
         group3.position.set(0,0,0);
         scene.add(group3);
+        
+        int i=0.01
 
 
         
@@ -153,9 +155,8 @@
 
         group.rotation.y += 0.01;
         group2.rotation.y += 0.03;
-        if(group3.rotation.y > 15 && group3.rotation.y < -15)
-          group3.rotation.y += 0.07;
-        else group3.rotation.y -= 0.05;
+        group3.rotation.y += i;
+        i +=0.01
         }
       }
     </script>
