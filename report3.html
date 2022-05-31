@@ -151,11 +151,11 @@
         sphere3.rotation.y += 0.5;
         sphere4.rotation.y += 0.09;
 
-
         group.rotation.y += 0.01;
         group2.rotation.y += 0.03;
         group3.rotation.y += 0.02;
-
+        if(group3.rotation.y == 3)
+          group3.rotation.y = 0;
         }
       }
     </script>
