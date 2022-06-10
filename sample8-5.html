@@ -94,12 +94,14 @@
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
+          
+          
+          box.rotation.x += 0.03;
+          box.rotation.y += 0.02;
+          
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
-          
-          box.rotation.x += 0.03;
-          box.rotation.y += 0.04;
         }
       }
     </script>
