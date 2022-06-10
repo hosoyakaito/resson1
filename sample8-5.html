@@ -49,6 +49,13 @@
 
       const axisHelper = new THREE.AxisHelper(200,50);
       scene.add(axisHelper);
+        
+        
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var box = new THREE.Mesh(geometry, material);
+        box.position.set(0,0,0);
+        scene.add(box);
 
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
@@ -90,6 +97,8 @@
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
+          
+          box.
         }
       }
     </script>
