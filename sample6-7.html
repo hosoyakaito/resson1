@@ -156,6 +156,13 @@
         group3.add(sphere4);  
         group3.position.set(0,0,0);
         scene.add(group3);
+        
+        const group4 = new THREE.Group() 
+        group4.add(sphere5);
+        group4.add(sphere6);  
+        group4.position.set(0,0,0);
+        scene.add(group4);
+
 
         i=1;
         
@@ -186,14 +193,10 @@
         }
 
 
-        //sphere2.rotation.y += 0.03;
-        sphere3.rotation.y += 0.5;
-        sphere4.rotation.y += 0.09;
-
-
         group.rotation.y += 0.01;
         group2.rotation.y += 0.03;
         group3.rotation.y += 0.02;
+        group4.rotation.y += 0.02;  
 
         }
       }
