@@ -39,10 +39,10 @@
       //シーンに追加
       scene.add(directionalLightM);
 
-      var pointLight = new THREE.PointLight(0xffffff,1);
+      var pointLight = new THREE.PointLight(0xffffff,10);
       pointLight.position.set(0, 0, 0);
       pointLight.castShadow = true; 
-      scene.add(pointLight);
+      //scene.add(pointLight);
 
       //var directionalLightM2 = new THREE.DirectionalLight(0xffffff,0.5);
       //directionalLightM2.position.set(0, -1, 5);
@@ -58,13 +58,13 @@
       light.castShadow = true;
       //light.shadow.mapSize.width = 2048;
       //light.shadow.mapSize.height = 2048;
-      //scene.add(light);
+      scene.add(light);
 
       // 平行光源(色、強さ）補助光源
       var directionalLightS = new THREE.DirectionalLight(0xffffff,10);
       directionalLightS.position.set(-1, -1, 1);
       // シーンに追加
-      //scene.add(directionalLightS);
+      scene.add(directionalLightS);
 
         // helper
         //const gridHelper = new THREE.GridHelper(2,10); // size, step
