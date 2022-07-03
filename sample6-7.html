@@ -135,9 +135,10 @@
         mat.map = texture;
 
         var sphereGeometry5 = new THREE.SphereGeometry( 0.5, 32, 32 );
-        var sphereMaterial5 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
-        var sphere5 = new THREE.Mesh( sphereGeometry5, sphereMaterial5 );
-        sphere5.castShadow = true;
+        //var sphereMaterial5 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
+        //var sphere5 = new THREE.Mesh( sphereGeometry5, sphereMaterial5 );
+        var sphere5 = new THREE.Mesh( sphereGeometry5, mat );
+        //sphere5.castShadow = true;
         sphere5.position.set( 5, 0, 0 );
 
 
