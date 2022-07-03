@@ -191,7 +191,11 @@
 
         if(i==0){
           scene.add( sphere5 );
-        }else scene.remove(sphere5);
+          scene.add( sphere6 );
+        }else {
+          scene.remove(sphere5);
+          scene.remove(sphere6);
+        }
 
 
         //sphere2.rotation.y += 0.03;
