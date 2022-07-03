@@ -176,10 +176,12 @@
 
         if(sphere2.position.y<3.6 && i==1){
           sphere2.position.y += 0.03;
-          if(sphere2.position.y>=3.6){
-            i=0;
-          }
-        }else sphere2.position.y -= 0.03;
+          sphere2.rotation.x -= 0.01
+        }else {
+          sphere2.position.y -= 0.03;
+          sphere2.rotation.x += 0.01
+          i=0;
+        }
         if(sphere2.position.y <=0){
           i=1;
         }
