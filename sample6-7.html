@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBBAAA
+  BBBAAAAAAAAa
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -220,6 +220,24 @@
         rwin2.scale.z = 0.5;
         rwin2.rotation.z = -2.5;
         rwin2.position.set(-0.36,0.23,0);
+        
+        var beak_g2 = new THREE.ConeGeometry( 0.05, 0.5, 32 );
+        var material_beak2 = new THREE.MeshPhongMaterial({ color: 0xffff00 });
+        var beak2 = new THREE.Mesh( beak_g2, material_beak2);
+        beak2.rotation.x = 1.5;
+        beak2.position.set(0,1,0.6);
+        beak2.position.set(0,0.5,0.3);
+
+        //左目
+        var eye_g2 = new THREE.SphereGeometry( 0.05, 32, 32 );
+        var material_eye2 = new THREE.MeshPhongMaterial({ color: 0xffffff });
+        var l_eye2 = new THREE.Mesh( eye_g2, material_eye2);
+        l_eye2.position.set(0.1,0.65,0.175);
+
+        //右目
+        var r_eye2 = new THREE.Mesh( eye_g2, material_eye2);
+        r_eye2.position.set(-0.1,0.65,0.175);
+
 
 
         //ペンギンのオブジェクト
@@ -230,10 +248,10 @@
         pengin2.add(rleg2); //右足を追加
         pengin2.add(lwin2); //左羽を追加
         pengin2.add(rwin2); //右羽を追加        
-        pengin2.add(beak); //くちばし
-        pengin2.add(l_eye); //左目
-        pengin2.add(r_eye); //右目
-        pengin2.position.set(0,-1.0,0);
+        pengin2.add(beak2); //くちばし
+        pengin2.add(l_eye2); //左目
+        pengin2.add(r_eye2); //右目
+        pengin2.position.set(0,5.0,0);
         scene.add(pengin2);
         
         
