@@ -235,7 +235,7 @@
         var sphere5 = new THREE.Mesh( sphereGeometry5, mat );
         sphere5.castShadow = true;
         sphere5.position.set( 5, 0, 0 );
-        sphere5.rotation.set( 0, 3.1, 0);
+        sphere5.rotation.set( 0, 3.1, -0.03);
         
         var sphereGeometry6 = new THREE.SphereGeometry( 0.5, 32, 32 );
         //var sphereMaterial5 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
@@ -243,7 +243,7 @@
         var sphere6 = new THREE.Mesh( sphereGeometry6, mat );
         sphere6.castShadow = true;
         sphere6.position.set( -5, 0, 0);
-        sphere6.rotation.set( 0, 0, 0);
+        sphere6.rotation.set( 0, 0, -0.03);
 
 
         const group = new THREE.Group()
