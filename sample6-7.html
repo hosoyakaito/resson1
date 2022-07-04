@@ -230,7 +230,7 @@
         var sphere4 = new THREE.Mesh( sphereGeometry4, mat );
         sphere4.castShadow = true;
         sphere4.position.set( -3, 0, 0 );
-        scene.add( sphere4 );
+        //scene.add( sphere4 );
 
 
         var sphereGeometry5 = new THREE.SphereGeometry( 0.5, 32, 32 );
@@ -256,6 +256,15 @@
         sphere7.position.set( 0, 5, -500 );
         sphere7.rotation.set( 0, -1.55, -0.09);
         scene.add( sphere7 );
+        
+        
+        var sphereGeometry8 = new THREE.SphereGeometry( 0.000001, 32, 32 );
+        //var sphereMaterial7 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
+        //var sphere7 = new THREE.Mesh( sphereGeometry2, sphereMaterial2 );
+        var sphere8 = new THREE.Mesh( sphereGeometry8, 0xffffff);
+        sphere8.position.set( 0, -1.5, 0 );
+        //scene.add( sphere8 );
+        
         
         
         var texture1 = textureLoader.load("img/star.png");
@@ -338,16 +347,16 @@
         }else star = 1;
         
         if(star == 1){
-          const starpengin = new THREE.Group()
-          starpengin.add(pengin);
-          starpengin.add(sprite1);
-          starpengin.position.set(0,-1.5,0);
-          scene.add(starpengin);
+          const star2 = new THREE.Group()
+          star2.add(sphere8);
+          star2.add(sprite1);
+          star2.position.set(0,-1.5,0);
+          scene.add(star2);
           star = 2;
         }
         
         if(star == 2){
-          starpengin.rotation.z += 0.02;
+          star2.rotation.z += 0.02;
         }
           
         
