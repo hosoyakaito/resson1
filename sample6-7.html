@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBBAAA
+  BBBAAACCC
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -424,7 +424,7 @@
         if(star == 1){
           c++;
           if(c >= 180 && count == 0){
-            scene.add(pointLight2);
+           group2.rotation.y += 0.05;
           }
           if(c >=360 && count == 0){
             count = 1;
