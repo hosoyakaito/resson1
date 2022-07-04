@@ -360,7 +360,7 @@
         group4.add(sphere5);
         group4.add(sphere6);  
         group4.position.set(0,0,0);
-        scene.add(group4);
+        //scene.add(group4);
         
         const group5 = new THREE.Group() 
         group5.add(sphere5);
@@ -417,12 +417,13 @@
             group3.rotation.y += 0.02;
             group4.rotation.y += 0.01;
             group5.rotation.y += 0.01; 
-            
-          }else if(count == 0 && star != 1){
+            o = 1;
+          }else if(o==1){
             scene.remove(sprite1);
-            scene.add(group5);
+            scene.add(group4);
             scene.remove(pengin);
             scene.add(pengin2);
+            o=2;
             star = 1;
           }
           
