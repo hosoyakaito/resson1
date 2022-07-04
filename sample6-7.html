@@ -25,6 +25,8 @@
 
         // シーンを作成
         const scene = new THREE.Scene();
+        
+        scene.fogg = new THREE.Fog(0x000000, 50, 2000);
 
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
