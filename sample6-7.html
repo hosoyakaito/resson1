@@ -42,7 +42,7 @@
       var pointLight = new THREE.PointLight(0xffffff,1);
       pointLight.position.set(0, 0, 0);
       pointLight.castShadow = true; 
-      scene.add(pointLight);
+      //scene.add(pointLight);
 
       //var directionalLightM2 = new THREE.DirectionalLight(0xffffff,0.5);
       //directionalLightM2.position.set(0, -1, 5);
@@ -82,7 +82,7 @@
         mat.bumpscale = 0.2;
 
         // 平面を作成
-        var planeGeometry = new THREE.PlaneGeometry(15,15);
+        var planeGeometry = new THREE.PlaneGeometry(10,10);
         //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
         var planeMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
         //var plane = new THREE.Mesh(planeGeometry,planeMaterial);
