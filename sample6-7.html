@@ -386,6 +386,7 @@
         }else scene.remove(group4);
         
         a++;
+        l+=0.05;
         a=a%10;
         if(a<5){
            pengin.position.x +=0.02;
@@ -408,6 +409,14 @@
           scene.add(pengin2);
           scene.add(group4);
           star = 1;
+        }
+          
+        if(star == 1){
+          l+=0.05;
+          var pointLight2 = new THREE.PointLight(0xffffff,l);
+          pointLight2.position.set(0, 0, 0);
+          pointLight2.castShadow = true; 
+          scene.add(pointLight2);
         }
           
         
