@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBB
+  BBBAAA
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -36,43 +36,47 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
         
-      // 平行光源(色、強さ）主光源
-      var directionalLightM = new THREE.DirectionalLight(0xffffff,0.5);
-      directionalLightM.position.set(0, 15, -5);
-      directionalLightM.castShadow = true; 
-      //シーンに追加
-      scene.add(directionalLightM);
+      
+        // 平行光源(色、強さ）主光源
+      
+        var directionalLightM = new THREE.DirectionalLight(0xffffff,0.5);
+      
+        directionalLightM.position.set(0, 15, -5);
+      
+        directionalLightM.castShadow = true; 
+      
+        //シーンに追加
+      
+        scene.add(directionalLightM);
 
-      var pointLight = new THREE.PointLight(0xffffff,0.5);
-      pointLight.position.set(0, 0, 0);
-      pointLight.castShadow = true; 
-      scene.add(pointLight);
+      
+        var pointLight = new THREE.PointLight(0xffffff,0.5);
+      
+        pointLight.position.set(0, 0, 0);
+      
+        pointLight.castShadow = true; 
+      
+        scene.add(pointLight);
         
-      var pointLight2 = new THREE.PointLight(0xffffff,5);
-      pointLight2.position.set(0, 0, 0);
-      pointLight2.castShadow = true;
+      
+        var pointLight2 = new THREE.PointLight(0xffffff,5);
+      
+        pointLight2.position.set(0, 0, 0);
+      
+        pointLight2.castShadow = true;
 
-      //var directionalLightM2 = new THREE.DirectionalLight(0xffffff,0.5);
-      //directionalLightM2.position.set(0, -1, 5);
-      //directionalLightM2.castShadow = true; 
-      //シーンに追加
-      //scene.add(directionalLightM2);
+      
 
-      // 照明を作成SpotLight(色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
-      var light = new THREE.SpotLight(0xffffff, 2, 100, Math.PI / 20, 0.05);
-      light.position.set(0,15, 0);
-      //light.target.position.set( 0, 5, -100 );
-      // ライトに影を有効にする
-      light.castShadow = true;
-      //light.shadow.mapSize.width = 2048;
-      //light.shadow.mapSize.height = 2048;
-      //scene.add(light);
-
-      // 平行光源(色、強さ）補助光源
-      var directionalLightS = new THREE.DirectionalLight(0xffffff,1);
-      directionalLightS.position.set(-1, -1, 1);
-      // シーンに追加
-      scene.add(directionalLightS);
+      
+        // 平行光源(色、強さ）補助光源
+      
+        var directionalLightS = new THREE.DirectionalLight(0xffffff,1);
+      
+        directionalLightS.position.set(-1, -1, 1);
+      
+        // シーンに追加
+      
+        scene.add(directionalLightS);
         
 
         // helper
@@ -365,66 +369,88 @@
         a=0;
         star=0;
         count=0;
-        c=0;
+        s=0;
         
         update();
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
           // レンダリング
-        renderer.render(scene, camera);
-        requestAnimationFrame(update);
-
-        if(sphere2.position.y<3.6 && i==1){
-          sphere2.position.y += 0.03;
-          sphere2.rotation.z -= 0.007;
-        }else {
-          sphere2.position.y -= 0.03;
-          sphere2.rotation.z += 0.007;
-          i=0;
-        }
-        if(sphere2.position.y <=0){
-          i=1;
-        }
-
-        if(i==0 && star == 0){
-          scene.add(group4);
-        }else scene.remove(group4);
         
-        a++;
-        a=a%10;
-        if(a<5 && star == 0){
-           pengin.position.x +=0.02;
-        }else pengin.position.x -=0.02;
+          renderer.render(scene, camera);
+          requestAnimationFrame(update);
         
-        sphere7.position.z += 0.1;
+          if(sphere2.position.y<3.6 && i==1){
+          
+            sphere2.position.y += 0.03;
+          
+            sphere2.rotation.z -= 0.007;
+        
+          }else {
+          
+            sphere2.position.y -= 0.03;
+          
+            sphere2.rotation.z += 0.007;
+          
+            i=0;
+        
+          }
+        
+          if(sphere2.position.y <=0){
+          
+            i=1;
+        
+          }
+
+        
+          if(i==0 && star == 0){
+          
+            scene.add(group4);
+       
+          }else scene.remove(group4);
+        
+        
+          a++;
+        
+          a=a%10;
+        
+          if(a<5 && star == 0){
+          
+            pengin.position.x +=0.02;
+       
+          }else pengin.position.x -=0.02;
+        
+        
+          sphere7.position.z += 0.1;
           
           
-        if(sprite1.position.y > -1 && star == 0){
-           sprite1.position.x -=0.2;
-           sprite1.position.y -=0.2;
-           sphere7.position.z += 0.6;
-           group.rotation.y += 0.015;
-           group2.rotation.y += 0.03;
-           group3.rotation.y += 0.02;
-           group4.rotation.y += 0.01;  
-        }else{
-          scene.remove(sprite1);
-          scene.remove(pengin);
-          scene.add(pengin2);
-          scene.add(group4);
-          star = 1;
+       
+          if(sprite1.position.y > -1 && star == 0){
+            sprite1.position.x -=0.2;
+            sprite1.position.y -=0.2;
+            sphere7.position.z += 0.6;
+            group.rotation.y += 0.015;
+            group2.rotation.y += 0.03;
+            group3.rotation.y += 0.02;
+            group4.rotation.y += 0.01;  
+          }else{
+            scene.remove(sprite1);
+            scene.remove(pengin);
+            scene.add(pengin2);
+            scene.add(group4);
+            star = 1;
+          }
+          
+          group.rotation.y += 0.005;
+          group2.rotation.y += 0.01;
+          group3.rotation.y += 0.005;
+          group4.rotation.y += 0.001;  
+          
+          if(star == 1){
+            c = 100;
+            star = 2;
+          } 
         }
-          
-        group.rotation.y += 0.005;
-        group2.rotation.y += 0.01;
-        group3.rotation.y += 0.005;
-        group4.rotation.y += 0.001;  
-          
-        //if(star == 1){
-          //c = 100;
-          //star = 2;
-        //} 
       }
     </script>
 </body>
