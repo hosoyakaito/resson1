@@ -173,7 +173,7 @@
         r_eye.position.set(-0.1,0.65,0.175);
 
         //ペンギンのオブジェクト
-        const pengin = new THREE.Group();
+        const pengin = new THREE.Group0();
         pengin.add(head); // 頭を追加
         pengin.add(body); //体を追加
         pengin.add(lleg); //左足を追加
@@ -187,6 +187,8 @@
         scene.add(pengin);
         
         
+        
+        group.position.set(0,-1.5,0);
 
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("youkai_backbeard.png");
