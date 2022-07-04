@@ -234,6 +234,7 @@
         pengin2.add(l_eye); //左目
         pengin2.add(r_eye); //右目
         pengin2.position.set(0,-1.0,0);
+        scene.add(pengin2);
         
         
         
@@ -381,12 +382,12 @@
            sprite1.position.y -=0.2;
         }
           
-        if(sprite1.position.x <= 0 && star == 0){
-          scene.remove(sprite1);
-          scene.remove(pengin);
-          scene.add(pengin2);
-          star = 2;
-        }
+        //if(sprite1.position.x <= 0 && star == 0){
+          //scene.remove(sprite1);
+          //scene.remove(pengin);
+          //scene.add(pengin2);
+          //star = 2;
+        //}
           
         
         group.rotation.y += 0.01;
