@@ -381,7 +381,7 @@
           i=1;
         }
 
-        if(i==0){
+        if(i==0 && star == 0){
           scene.add(group4);
         }else scene.remove(group4);
         
@@ -406,6 +406,7 @@
           scene.remove(sprite1);
           scene.remove(pengin);
           scene.add(pengin2);
+          scene.add(group4);
           star = 1;
         }
           
