@@ -137,7 +137,7 @@
         var material_w = new THREE.MeshPhongMaterial({ color: 0x007777 });
         var lwin = new THREE.Mesh( win_g, material_w);
         lwin.scale.x = 0.2;
-        lwin.scale.z = 0.5;
+        lwin.scale.z = -0.5;
         lwin.rotation.z = 0.5;
         //lwin.position.set(0.65,0.15,0);
         lwin.position.set(0.325,0.075,0);
@@ -145,7 +145,7 @@
         //右羽を作成
         var rwin = new THREE.Mesh( win_g, material_w);
         rwin.scale.x = 0.2;
-        rwin.scale.z = 0.5;
+        rwin.scale.z = -0.5;
         rwin.rotation.z = -0.5;
         //rwin.position.set(-0.65,0.15,0);
         rwin.position.set(-0.325,0.075,0);
@@ -274,6 +274,7 @@
         group.position.set(0,-1.0,0);
         group2.position.set(0,-1.1,0);
         i=1;
+        a=0;
         
         update();
 
@@ -298,6 +299,13 @@
         if(i==0){
           scene.add(group4);
         }else scene.remove(group4);
+        
+        a++;
+        a=a%10;
+        if(a<5){
+           pengin.position.y +=0.1;
+        }else pengin.position.y -=0.1;
+        
 
 
         group.rotation.y += 0.01;
