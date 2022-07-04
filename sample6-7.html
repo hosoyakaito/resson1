@@ -399,7 +399,7 @@
           a=a%10;
           if(a<5 && star == 0){
             pengin.position.x +=0.02;
-          }else if(count =! 2){
+          }else if(count != 2){
             pengin.position.x -=0.02;
           }
         
@@ -413,7 +413,7 @@
             group2.rotation.y += 0.03;
             group3.rotation.y += 0.02;
             group4.rotation.y += 0.01;  
-          }else if(count =! 0){
+          }else if(count != 0){
             scene.remove(sprite1);
             scene.remove(pengin);
             scene.add(pengin2);
