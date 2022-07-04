@@ -391,11 +391,13 @@
            pengin.position.x +=0.02;
         }else pengin.position.x -=0.02;
         
-        sphere7.position.z += 0.5;
+        sphere7.position.z += 0.1;
+          
           
         if(sprite1.position.y > -1 && star == 0){
            sprite1.position.x -=0.2;
            sprite1.position.y -=0.2;
+          sphere7.position.z += 0.6;
         }else{
           scene.remove(sprite1);
           scene.remove(pengin);
