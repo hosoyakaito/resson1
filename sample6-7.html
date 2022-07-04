@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  Bsjhd
+  Bsjhdsdger
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -362,10 +362,10 @@
         group4.position.set(0,0,0);
         scene.add(group4);
         
-        const group5 = new THREE.Group() 
-        group5.add(sphere5);
-        group5.add(sphere6);  
-        group5.position.set(0,0,0);
+        //const group5 = new THREE.Group() 
+        //group5.add(sphere5);
+        //group5.add(sphere6);  
+        //group5.position.set(0,0,0);
         
         
         group.position.set(0,-1.0,0);
@@ -421,11 +421,11 @@
             group2.rotation.y += 0.03;
             group3.rotation.y += 0.02;
             group4.rotation.y += 0.01;
-            group5.rotation.y += 0.01;
+            //group5.rotation.y += 0.01;
           }
           if(sprite1.position.y <= -1 && star == 0){
             scene.remove(sprite1);
-            scene.add(group5);
+            //scene.add(group5);
             scene.remove(pengin);
             scene.add(pengin2);
             star = 1;
@@ -435,7 +435,7 @@
           group2.rotation.y += 0.01;
           group3.rotation.y += 0.005;
           group4.rotation.y += 0.001;
-          group5.rotation.y += 0.001;
+          //group5.rotation.y += 0.001;
           
           if(star == 1){
             c++;
@@ -450,7 +450,7 @@
               scene.remove(group);
               scene.remove(group2);
               scene.remove(group3);
-              scene.remove(group5);
+              //scene.remove(group5);
               scene.remove(sphere7);
               count = 2;
             }
