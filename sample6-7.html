@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBBAAA
+  BBBAAACCC
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -379,6 +379,8 @@
         
           renderer.render(scene, camera);
           requestAnimationFrame(update);
+          
+          System.out.print(c);
         
           if(sphere2.position.y<3.6 && i==1){
           
