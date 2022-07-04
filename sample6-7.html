@@ -296,6 +296,7 @@
         group2.position.set(0,-1.1,0);
         i=1;
         a=0;
+        star=0;
         
         update();
 
@@ -329,10 +330,23 @@
         
         sphere7.position.z += 0.2;
           
-       if(sprite1.position.y >= -1){
+        if(sprite1.position.y >= -1 && star == 0){
            sprite1.position.x -=0.2;
            sprite1.position.y -=0.2;
-       }
+        }else star = 1;
+        
+        if(star == 1){
+          const starpengin = new THREE.Group()
+          group.add(pengin);
+          group.add(sprite1);
+          group.position.set(0,-1.5,0);
+          scene.add(starpengin);
+          star = 2;
+        }
+        
+        if(star == 2){
+          starpengin.rotation.z += 0.02;
+        }
           
         
         
