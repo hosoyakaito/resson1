@@ -47,6 +47,10 @@
       pointLight.position.set(0, 0, 0);
       pointLight.castShadow = true; 
       scene.add(pointLight);
+        
+      var pointLight2 = new THREE.PointLight(0xffffff,5);
+      pointLight2.position.set(0, 0, 0);
+      pointLight2.castShadow = true;
 
       //var directionalLightM2 = new THREE.DirectionalLight(0xffffff,0.5);
       //directionalLightM2.position.set(0, -1, 5);
@@ -360,6 +364,7 @@
         i=1;
         a=0;
         star=0;
+        count=0;
         
         update();
 
@@ -386,9 +391,8 @@
         }else scene.remove(group4);
         
         a++;
-        l+=0.05;
         a=a%10;
-        if(a<5){
+        if(a<5 && star == 0){
            pengin.position.x +=0.02;
         }else pengin.position.x -=0.02;
         
@@ -412,12 +416,25 @@
         }
           
         if(star == 1){
-          l+=0.05;
-          var pointLight2 = new THREE.PointLight(0xffffff,l);
-          pointLight2.position.set(0, 0, 0);
-          pointLight2.castShadow = true; 
-          scene.add(pointLight2);
+          c++;
+          if(c >= 180 && count == 0){
+            scene.add(pointLight2);
+          }
+          if(c >=360 && count == 0){
+            count = 1;
+            star = 2;
+            scene.remove(pointLight2);
+            scene.remove(group);
+            scene.remove(group2);
+            scene.remove(group3);
+            scene.remove(group4);
+            scene.remove(pengin2);
+            scene.add(pengin);
+          }
         }
+          
+        l++;
+        
           
         
         group.rotation.y += 0.005;
