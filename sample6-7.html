@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBBA
+  BBBAgyrv
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -362,10 +362,10 @@
         group4.position.set(0,0,0);
         scene.add(group4);
         
-        //const group5 = new THREE.Group() 
-        //group5.add(sphere5);
-        //group5.add(sphere6);  
-        //group5.position.set(0,0,0);
+        const group5 = new THREE.Group() 
+        group5.add(sphere5);
+        group5.add(sphere6);  
+        group5.position.set(0,0,0);
         
         
         group.position.set(0,-1.0,0);
@@ -421,7 +421,7 @@
           }
           if(sprite1.position.y <= -1 && star == 0){
             scene.remove(sprite1);
-            scene.add(group4);
+            scene.add(group5);
             scene.remove(pengin);
             scene.add(pengin2);
             star = 1;
@@ -445,7 +445,7 @@
               scene.remove(group);
               scene.remove(group2);
               scene.remove(group3);
-              scene.remove(group4);
+              scene.remove(group5);
               count = 2;
             }
           } 
