@@ -247,7 +247,12 @@
         sphere6.position.set( -5, 0, 0);
         sphere6.rotation.set( 0, 0, -0.03);
         
-        
+        var sphereGeometry7 = new THREE.SphereGeometry( 10, 32, 32 );
+        //var sphereMaterial7 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
+        //var sphere7 = new THREE.Mesh( sphereGeometry2, sphereMaterial2 );
+        var sphere7 = new THREE.Mesh( sphereGeometry7, mat);
+        sphere7.position.set( 0, 5, -30 );
+        scene.add( sphere7 );
         
 
 
@@ -312,12 +317,7 @@
         }else pengin.position.x -=0.02;
         
 
-        var sphereGeometry7 = new THREE.SphereGeometry( 10+a/10, 32, 32 );
-        //var sphereMaterial7 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
-        //var sphere7 = new THREE.Mesh( sphereGeometry2, sphereMaterial2 );
-        var sphere7 = new THREE.Mesh( sphereGeometry7, mat);
-        sphere7.position.set( 0, 5, -30 );
-        scene.add( sphere7 );
+        sphere7.size +=a;
 
         group.rotation.y += 0.01;
         group2.rotation.y += 0.03;
