@@ -397,7 +397,11 @@
         if(sprite1.position.y > -1 && star == 0){
            sprite1.position.x -=0.2;
            sprite1.position.y -=0.2;
-          sphere7.position.z += 0.6;
+           sphere7.position.z += 0.6;
+           group.rotation.y += 0.03;
+           group2.rotation.y += 0.06;
+           group3.rotation.y += 0.04;
+           group4.rotation.y += 0.02;  
         }else{
           scene.remove(sprite1);
           scene.remove(pengin);
