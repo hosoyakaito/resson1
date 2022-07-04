@@ -263,7 +263,7 @@
         sprite1.position.x = 100;
         sprite1.position.y = 105;
         sprite1.position.z = 0;
-        sprite1.scale.set(3,3,3);
+        sprite1.scale.set(1,1,1);
         scene.add(sprite1);
         
 
@@ -330,8 +330,11 @@
         
         sphere7.position.z += 0.2;
           
-        sprite1.position.x -=0.3;
-        sprite1.position.y -=0.3;
+       if(sprite1.position.y =! 0){
+           sprite1.position.x -=0.2;
+           sprite1.position.y -=0.2;
+       }
+          
         
         
         group.rotation.y += 0.01;
