@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  aa
+  aaa
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -339,9 +339,9 @@
         
         if(star == 1){
           const starpengin = new THREE.Group()
-          group.add(pengin);
-          group.add(sprite1);
-          group.position.set(0,-1.5,0);
+          starpengin.add(pengin);
+          starpengin.add(sprite1);
+          starpengin.position.set(0,-1.5,0);
           scene.add(starpengin);
           star = 2;
         }
