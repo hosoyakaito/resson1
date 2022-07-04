@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBBAAAAAAAAa
+  BBBAAA
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -183,24 +183,24 @@
         
         // 頭を作成
         var head_g2 = new THREE.SphereGeometry( 0.25, 32, 32 );
-        var head2 = new THREE.Mesh(head_g2, material);
+        var head2 = new THREE.Mesh(head_g2, material2);
         head2.position.set(0,0.6,0);
 
         //体を作成
         var body_g2 = new THREE.SphereGeometry( 0.3, 32, 32 );
-        var body2 = new THREE.Mesh( body_g2, material);
+        var body2 = new THREE.Mesh( body_g2, material2);
         body2.scale.y =1.5;
         body2.position.set(0,0,0);
 
         //左足を作成
         var leg_g2 = new THREE.SphereGeometry( 0.125, 32, 32 );
-        var lleg2 = new THREE.Mesh( leg_g2, material);
+        var lleg2 = new THREE.Mesh( leg_g2, material2);
         lleg2.scale.z = 2;
         lleg2.scale.y = 0.7;
         lleg2.position.set(0.15,-0.4,0.1);
 
         //右足を作成
-        var rleg2 = new THREE.Mesh( leg_g2, material);
+        var rleg2 = new THREE.Mesh( leg_g2, material2);
         rleg2.scale.z = 2;
         rleg2.scale.y = 0.7;
         rleg2.position.set(-0.15,-0.4,0.1);
@@ -208,14 +208,14 @@
     
         //左羽を作成
         var win_g2 = new THREE.SphereGeometry( 0.35, 32, 32 );
-        var lwin2 = new THREE.Mesh( win_g2, material);
+        var lwin2 = new THREE.Mesh( win_g2, material2);
         lwin2.scale.x = 0.2;
         lwin2.scale.z = 0.5;
         lwin2.rotation.z = 2.5;
         lwin2.position.set(0.36,0.23,0);
 
         //右羽を作成
-        var rwin2 = new THREE.Mesh( win_g2, material);
+        var rwin2 = new THREE.Mesh( win_g2, material2);
         rwin2.scale.x = 0.2;
         rwin2.scale.z = 0.5;
         rwin2.rotation.z = -2.5;
@@ -403,7 +403,7 @@
         if(sprite1.position.x <= 0 && star == 0){
           scene.remove(sprite1);
           scene.remove(pengin);
-          //scene.add(pengin2);
+          scene.add(pengin2);
           star = 2;
         }
           
