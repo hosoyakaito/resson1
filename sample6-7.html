@@ -369,7 +369,7 @@
         a=0;
         star=0;
         count=0;
-        s=0;
+        c=0;
         
         update();
 
@@ -447,8 +447,20 @@
           group4.rotation.y += 0.001;  
           
           if(star == 1){
-            c = 100;
-            star = 2;
+            c++;
+            if(c >= 180 && count == 0){
+              scene.add(pointLight2);
+              count = 1;
+            }
+            if(c >=360 && count == 1){
+              scene.remove(pointLight2);
+              scene.remove(pengin2);
+              scene.add(pengin);
+              scene.remove(group);
+              scene.remove(group2);
+              scene.remove(group3);
+              scene.remove(group4);
+              count = 2;
           } 
         }
       }
