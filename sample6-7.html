@@ -258,20 +258,11 @@
         scene.add( sphere7 );
         
         
-        var sphereGeometry8 = new THREE.SphereGeometry( 0.000001, 32, 32 );
-        //var sphereMaterial7 = new THREE.MeshPhongMaterial( {color: 0x1e90ff });
-        //var sphere7 = new THREE.Mesh( sphereGeometry2, sphereMaterial2 );
-        var sphere8 = new THREE.Mesh( sphereGeometry8, 0xffffff);
-        sphere8.position.set( 0, -1.5, 0 );
-        //scene.add( sphere8 );
-        
-        
-        
         var texture1 = textureLoader.load("img/star.png");
         const material1 = new THREE.SpriteMaterial({ map: texture1,});
         const sprite1 = new THREE.Sprite(material1);
-        sprite1.position.x = 100;
-        sprite1.position.y = 102;
+        sprite1.position.x = 98;
+        sprite1.position.y = 100;
         sprite1.position.z = 0;
         sprite1.scale.set(0.5,0.5,0.5);
         scene.add(sprite1);
@@ -301,12 +292,6 @@
         group4.add(sphere6);  
         group4.position.set(0,0,0);
         scene.add(group4);
-        
-        const star2 = new THREE.Group()
-        star2.add(sphere8);
-        star2.add(sprite1);
-        star2.position.set(0,-1.5,0);
-        scene.add(star2);
         
         
         group.position.set(0,-1.0,0);
@@ -350,23 +335,14 @@
         if(sprite1.position.y > 0.5 && star == 0){
            sprite1.position.x -=0.2;
            sprite1.position.y -=0.2;
-        }else star = 1;
-        
-        if(star == 1 && sprite1.position.y >= 0){
-          star2.rotation.z += 0.1;
-          if(sprite1.rotation.z >= 3.1{
-             star = 2;
-             //star2.position.set(0,sprite1.position.x/2,0);
-          }
         }
-        
-        //if(star == 2 && sprite1.position.y >= -1){
-          //star2.rotation.z -= 0.05;
-        //}
-        
-        
           
-        
+        if(sprite1.position.x <= 0 && star == 0){
+          scene.remove(sprite1);
+          scene.remove(pengin);
+          star = 2;
+        }
+          
         
         group.rotation.y += 0.01;
         group2.rotation.y += 0.03;
