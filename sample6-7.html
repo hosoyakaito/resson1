@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  BBB
+  BBBAAA
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -184,7 +184,7 @@
         // 頭を作成
         var head_g2 = new THREE.SphereGeometry( 0.25, 32, 32 );
         var head2 = new THREE.Mesh(head_g2, material);
-        head.position.set(0,0.6,0);
+        head2.position.set(0,0.6,0);
 
         //体を作成
         var body_g2 = new THREE.SphereGeometry( 0.3, 32, 32 );
@@ -382,12 +382,12 @@
            sprite1.position.y -=0.2;
         }
           
-        //if(sprite1.position.x <= 0 && star == 0){
-          //scene.remove(sprite1);
-          //scene.remove(pengin);
+        if(sprite1.position.x <= 0 && star == 0){
+          scene.remove(sprite1);
+          scene.remove(pengin);
           //scene.add(pengin2);
-          //star = 2;
-        //}
+          star = 2;
+        }
           
         
         group.rotation.y += 0.01;
