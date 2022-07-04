@@ -61,7 +61,7 @@
       
         var pointLight2 = new THREE.PointLight(0xffffff,5);
       
-        pointLight2.position.set(0, 0, 0);
+        pointLight2.position.set(0, -1, 0);
       
         pointLight2.castShadow = true;
 
@@ -411,7 +411,7 @@
             group2.rotation.y += 0.03;
             group3.rotation.y += 0.02;
             group4.rotation.y += 0.01;  
-          }else{
+          }else if(count == 0){
             scene.remove(sprite1);
             scene.remove(pengin);
             scene.add(pengin2);
