@@ -378,55 +378,31 @@
           // レンダリング
         
           renderer.render(scene, camera);
-          requestAnimationFrame(update);
-          
-          System.out.print(c);
+          requestAnimationFrame(update)
         
           if(sphere2.position.y<3.6 && i==1){
-          
             sphere2.position.y += 0.03;
-          
             sphere2.rotation.z -= 0.007;
-        
           }else {
-          
             sphere2.position.y -= 0.03;
-          
             sphere2.rotation.z += 0.007;
-          
             i=0;
-        
           }
-        
           if(sphere2.position.y <=0){
-          
             i=1;
-        
-          }
-
-        
+          }    
           if(i==0 && star == 0){
-          
             scene.add(group4);
-       
           }else scene.remove(group4);
         
-        
           a++;
-        
           a=a%10;
-        
           if(a<5 && star == 0){
-          
             pengin.position.x +=0.02;
-       
           }else pengin.position.x -=0.02;
-        
         
           sphere7.position.z += 0.1;
           
-          
-       
           if(sprite1.position.y > -1 && star == 0){
             sprite1.position.x -=0.2;
             sprite1.position.y -=0.2;
