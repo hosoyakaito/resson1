@@ -84,9 +84,9 @@
         // 平面を作成
         var planeGeometry = new THREE.PlaneGeometry(15,15);
         //var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
-        //var planeMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+        var planeMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
         //var plane = new THREE.Mesh(planeGeometry,planeMaterial);
-        var plane = new THREE.Mesh(planeGeometry, mat);
+        var plane = new THREE.Mesh(planeGeometry, planeMaterial);
         plane.receiveShadow = true; //影がつく
         plane.rotation.set( -Math.PI/2, 0, 0 );
         plane.position.set(0,-1.5,0);
