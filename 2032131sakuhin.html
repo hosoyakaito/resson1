@@ -465,22 +465,24 @@
             sprite1.position.x = 172;
             sprite1.position.y = 171;
             star = 0;
-            if(t <= 200 && up < 20){
-              pengin.position.y +=1/up;
-              up++;
-              down++;
-            }else if(t <= 200 &&  down > 0){
-              pengin.position.y -=1/down;
-              down--;
-              up--;
-            }
-            if(t == 201){
-              scene.add(group);
-              scene.add(group2);
-              scene.add(group3);
-              scene.add(sphere7);
-              g=0;
-            }
+          }
+          if(t <= 200 && up < 20){
+            pengin.position.y +=1/up;
+            up++;
+            down++;
+          }else if(t <= 200 &&  down > 0){
+            pengin.position.y -=1/down;
+            down--;
+            up--;
+          }
+          if(t == 201){
+            scene.add(group);
+            scene.add(group2);
+            scene.add(group3);
+            scene.add(sphere7);
+            g=0;
+            count == 3;
+          }
         }
       }
     </script>
