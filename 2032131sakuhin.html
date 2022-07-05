@@ -444,6 +444,7 @@
           
           if(star == 1){
             c++;
+            pengin2.rotation.y += c/500;
             if(c >= 180 && count == 0){
               scene.add(pointLight2);
               count = 1;
@@ -451,6 +452,7 @@
             if(c >=360 && count == 1){
               scene.remove(pointLight2);
               scene.remove(pengin2);
+              pengin2.position.set(0,-1,0);
               scene.add(pengin);
               scene.remove(group);
               scene.remove(group2);
