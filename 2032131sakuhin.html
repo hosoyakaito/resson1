@@ -473,7 +473,7 @@
             t++;
             tt=t%40;
           }
-          if(count == 3 && t <= 320 && tt<20){
+          if(count == 3 && t <= 320 && t>= 40 && tt<20){
             pengin.position.y +=0.01;
             lwin.rotation.z +=0.02;
             rwin.rotation.z -=0.02;
