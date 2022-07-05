@@ -431,7 +431,7 @@
             scene.remove(sprite1);
             scene.add(group5);
             //scene.remove(pengin);
-            pengin.position.set(999999,-1,0);
+            pengin.position.set(10,-1,0);
             scene.add(pengin2);
             scene.remove(group4);
             g = 1;
@@ -474,11 +474,11 @@
             t++;
           }
           if(count == 3 && t <= 400 && up < 20){
-            pengin.position.y +=1/up;
+            //pengin.position.y +=1/up;
             up++;
             down++;
           }else if(count == 3 && t <= 400 &&  down > 0){
-            pengin.position.y -=1/down;
+            //pengin.position.y -=1/down;
             down--;
             up--;
           }
