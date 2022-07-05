@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  B1
+  B1sas
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -473,11 +473,11 @@
             t++;
           }
           if(count == 3 && t <= 400 && up < 20){
-            //pengin.position.y +=1/up;
+            pengin.position.y +=1;
             up++;
             down++;
           }else if(count == 3 && t <= 400 &&  down > 0){
-            //pengin.position.y -=1/down;
+            pengin.position.y -=1;
             down--;
             up--;
           }
