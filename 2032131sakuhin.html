@@ -465,7 +465,7 @@
             sprite1.position.x = 180;
             sprite1.position.y = 179;
             lwin.position.set(0.36,0.15,0);
-            lwin.position.set(-0.36,0.15,0);
+            rwin.position.set(-0.36,0.15,0);
             count = 3;
             star = 0;
           }
@@ -475,12 +475,12 @@
           }
           if(count == 3 && t <= 320 && tt<20){
             pengin.position.y +=0.01;
-            lwin.rotation.z +=0.01;
-            rwin.rotation.z -=0.01;
+            lwin.rotation.z +=0.05;
+            rwin.rotation.z -=0.05;
           }else if(count == 3 && t <= 320){
             pengin.position.y -=0.01;
-            lwin.rotation.z -=0.01;
-            rwin.rotation.z +=0.01;
+            lwin.rotation.z -=0.05;
+            rwin.rotation.z +=0.05;
           }
           if(t == 300){
             scene.add(group);
