@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  B1sas
+  B1sasaaa
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -376,8 +376,6 @@
         count=0;
         c=0;
         t=0;
-        up=0;
-        down=0;
         g = 0;
         
         update();
@@ -471,15 +469,12 @@
           }
           if( count == 3){
             t++;
+            tt=t%40;
           }
-          if(count == 3 && t <= 400 && up < 20){
-            pengin.position.y +=1;
-            up++;
-            down++;
-          }else if(count == 3 && t <= 400 &&  down > 0){
-            pengin.position.y -=1;
-            down--;
-            up--;
+          if(count == 3 && t <= 400 && tt<20){
+            pengin.position.y +=0.01;
+          }else if(count == 3 && t <= 400){
+            pengin.position.y -=0.01;
           }
           if(t == 300){
             scene.add(group);
@@ -496,8 +491,6 @@
             count=0;
             c=0;
             t=0;
-            up=0;
-            down=0;
             g = 0;
           }
         }
