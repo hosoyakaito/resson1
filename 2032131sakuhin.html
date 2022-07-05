@@ -17,6 +17,10 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         renderer.shadowMap.enabled = true;
+        
+        //renderer.setClearColor(0x00bfff);
+        //renderer.setClearColor(0x000000);
+        
 
         const scene = new THREE.Scene();
         
@@ -376,10 +380,12 @@
               count = 1;
             }
             if(c >=360 && count == 1){
+              renderer.setClearColor(0x00bfff);
               scene.remove(pointLight2);
               scene.remove(pengin2);
               pengin2.rotation.set(0,0,0);
               scene.add(pengin);
+              pengin.position.set(0,-1,0);
               scene.remove(group);
               scene.remove(group2);
               scene.remove(group3);
@@ -416,6 +422,7 @@
             scene.add(group3);
             scene.add(sphere7);
             scene.add(sprite1);
+            renderer.setClearColor(0x000000);
           }
           if(t == 401){
             i=1;
