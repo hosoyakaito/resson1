@@ -40,42 +40,24 @@
         // 平行光源(色、強さ）主光源
       
         var directionalLightM = new THREE.DirectionalLight(0xffffff,0.5);
-      
         directionalLightM.position.set(0, 15, -5);
-      
         directionalLightM.castShadow = true; 
-      
         //シーンに追加
-      
         scene.add(directionalLightM);
-
-      
-        var pointLight = new THREE.PointLight(0xffffff,0.5);
-      
-        pointLight.position.set(0, 0, 0);
-      
-        pointLight.castShadow = true; 
-      
-        scene.add(pointLight);
         
+        var pointLight = new THREE.PointLight(0xffffff,0.5);
+        pointLight.position.set(0, 0, 0);
+        pointLight.castShadow = true; 
+        scene.add(pointLight);
       
         var pointLight2 = new THREE.PointLight(0xffffff,5);
-      
         pointLight2.position.set(0, -1, 0);
-      
         pointLight2.castShadow = true;
-
-      
-
       
         // 平行光源(色、強さ）補助光源
-      
         var directionalLightS = new THREE.DirectionalLight(0xffffff,1);
-      
         directionalLightS.position.set(-1, -1, 1);
-      
         // シーンに追加
-      
         scene.add(directionalLightS);
         
 
@@ -392,6 +374,10 @@
         star=0;
         count=0;
         c=0;
+        t=0;
+        up=0;
+        down=0;
+        g = 0;
         
         update();
 
@@ -414,9 +400,9 @@
             i=1;
           }   
           
-          if(i==0 && star == 0){
+          if(i==0 && g == 0){
             scene.add(group4);
-          }else if(star != 1){
+          }else if(g != 1){
             scene.remove(group4);
           }
         
@@ -446,6 +432,7 @@
             scene.remove(pengin);
             scene.add(pengin2);
             star = 1;
+            g = 1;
           }
           
           group.rotation.y += 0.005;
@@ -471,7 +458,29 @@
               scene.remove(sphere7);
               count = 2;
             }
-          } 
+          }
+          if(count == 2){
+            t++;
+            sphere7.position.set( 0, 5, -752 );
+            sprite1.position.x = 172;
+            sprite1.position.y = 171;
+            star = 0;
+            if(t <= 200 && up < 20){
+              pengin.position.y +=1/up;
+              up++;
+              down++;
+            }else if(t <= 200 &&  down > 0){
+              pengin.position.y -=1/down;
+              down--;
+              up--;
+            }
+            if(t == 201){
+              scene.add(group);
+              scene.add(group2);
+              scene.add(group3);
+              scene.add(sphere7);
+              g=0;
+            }
         }
       }
     </script>
