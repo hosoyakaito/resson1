@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  Bsaaa
+  Bsaaaserfwesfverg
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -430,7 +430,8 @@
           if(sprite1.position.y <= -1 && star == 0){
             scene.remove(sprite1);
             scene.add(group5);
-            scene.remove(pengin);
+            //scene.remove(pengin);
+            pengin.position.set(999999,-1,0);
             scene.add(pengin2);
             scene.remove(group4);
             g = 1;
@@ -453,7 +454,7 @@
             if(c >=360 && count == 1){
               scene.remove(pointLight2);
               scene.remove(pengin2);
-              //scene.add(pengin);
+              pengin.position.set(0,-1,0);
               scene.remove(group);
               scene.remove(group2);
               scene.remove(group3);
@@ -463,7 +464,6 @@
             }
           }
           if(count == 2){
-            //scene.add(pengin);
             sphere7.position.set( 0, 5, -780 );
             sprite1.position.x = 180;
             sprite1.position.y = 179;
